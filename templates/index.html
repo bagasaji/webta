@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Data Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Menu</h1>
+        <a href="#rekomendasi">Rekomendasi</a>
+        <a href="#monitoring">Monitoring</a>
+        <a href="#gps">GPS</a>
+    </div>
+    <div class="main-content">
+        <div id="rekomendasi">
+            <h2>Rekomendasi</h2>
+            <!-- Add content for Rekomendasi here -->
+        </div>
+        <div id="monitoring">
+            <h2>Monitoring</h2>
+            <button onclick="fetchData()">Fetch Data</button>
+            <pre id="data-output"></pre>
+        </div>
+        <div id="gps">
+            <h2>GPS</h2>
+            <!-- Add content for GPS here -->
+        </div>
+        <div id="train">
+            <h2>Train Model</h2>
+            <button onclick="trainModel()">Train Model</button>
+            <pre id="train-output"></pre>
+        </div>
+        <div id="predict">
+            <h2>Predict</h2>
+            <button onclick="predict()">Get Prediction</button>
+            <pre id="predict-output"></pre>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
